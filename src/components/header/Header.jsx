@@ -9,14 +9,14 @@ export const Header = () => {
 
 return (
 <header>
-    <div className='container header__container'>
+    <div className='container header__container' id="home">
     <h5>Hello I'm</h5>
     <h1>Jenna Ebot Agbor</h1>
     <h5 className='text-light'>Software Engineer </h5>
     <CTA/> {/*here we are using the imported CTA component */}
     <HeaderSocial/>  {/*same here*/}
     <div className='my_image'>
-    <img src={me} alt='my image'/>
+    <img src={me} alt='myself'/>
     </div>
     <a href='#contact' className='scroll__down'>Scroll down</a>
     </div>
