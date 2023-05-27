@@ -3,8 +3,21 @@ import './contact.css'
 import {MdOutlineEmail} from 'react-icons/md'
 import {BsWhatsapp} from 'react-icons/bs'
 import {FaTwitter} from 'react-icons/fa'
+import { useRef } from 'react';
+import emailjs from 'emailjs-com'
 
 const Contact = () => {
+  const form = useRef();
+  
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_ymegzsc', 'template_ywg10g2', form.current, 'gi-Cx6Y2GPVoK_tND')
+         
+      
+      e.target.reset() 
+    };
+
   return (
     <section id = "contact">
       <h5>Get In Touch</h5>
@@ -33,11 +46,12 @@ const Contact = () => {
             <a href="https://www.twitter.com/agbor_jenna" target="_blank">Send a message</a>
           </article>
         </div>
-        <form action="">
+
+        <form ref={form} onSubmit={sendEmail}>
           <input type="text" name="Name" placeholder='Your full name' required />
           <input type="email" name="email" placeholder='Your email' required />
           <textarea name="message" id="" cols="7" placeholder='Your message' required></textarea>
-          <button type="submit" className='btn btn-primary'>Submit message</button>
+          <button type="submit" className='btn btn-primary'>Send message</button>
         </form>
       </div>
     </section>
