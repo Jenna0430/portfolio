@@ -39,8 +39,15 @@ const About = () => {
             </article>
           </div>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime assumenda sit nihil repellendus nesciunt, 
-            aperiam sunt aspernatur ad sequi iure, beatae officiis sed libero rerum minus dolor alias totam quaerat.</p>
+          <p>I am a young full stack developer being trained at the Faculty of Enginneering and 
+            Technology at the University of Buea(FET). I am looking forward to getting my B.Eng in 2025.
+            Being on demand for experience, i applied to work at Camsol.io which accepted me and gave me the 
+            the chance to work on real business projects in order to gain experience. From July 2022 to today, I learned
+            technologies as react, react native, in short the MERN stack and also have experience in version control systems
+            such as github. I am still learning and counting on the support of Camsol to increase my knowledge at end of being an 
+            engineer and not just graduate. Being a Cameroonian , a bilingual speaking  country, I understand and speak both English
+            and French.
+          </p>
 
           <a href="#contact" className = 'btn btn-primary'>Let's talk</a>
         </div>
