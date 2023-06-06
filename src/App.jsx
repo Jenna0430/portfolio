@@ -9,7 +9,7 @@ import Testimonial from './components/testimonials/testimonial'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 
-import React, {useEffect, useState} from 'react'
+
 
 
 

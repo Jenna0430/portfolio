@@ -1,12 +1,14 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './portfolio.css'
 import IMG1 from '../../assets/portfolio1.jpg'
 import IMG2 from '../../assets/portfolio2.jpg'
 import IMG3 from '../../assets/portfolio3.jpg'
 import IMG4 from '../../assets/portfolio4.jpg'
 import IMG5 from '../../assets/portfolio5.jpg'
+import axios from 'axios';
 
 
+/*
 const data = [
   {
   id: 1,
@@ -44,6 +46,12 @@ const data = [
   demo: '',
 }
 ]
+*/
+ const [data, setData] = useState([]);
+
+ useEffect(() => {
+    axios.get
+ })
 
 const Portfolio = () => {
   return (
