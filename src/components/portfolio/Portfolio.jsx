@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import './portfolio.css'
 import IMG1 from '../../assets/portfolio1.jpg'
 import IMG2 from '../../assets/portfolio2.jpg'
@@ -49,6 +49,26 @@ const data = [
  
 
 const Portfolio = () => {
+  const [testimonialData, setTestimonialData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('https://weary-erin-badger.cyclic.app/api/portfolio')
+      .then((res) => {
+        const formattedData = res.data.data.map((item) => ({
+          id: item._id,
+          image: item.image,
+          title: item.github,
+          demo: item.demo,
+        }));
+        console.log(`Here I am: ${formattedData}`);
+        setTestimonialData(formattedData);
+      })
+      .catch((error) => console.error(error));
+
+
+  }, []);
+
   return (
     <section id='portfolio'>
       <h5>My Recent Work</h5>
